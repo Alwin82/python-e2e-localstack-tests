@@ -136,11 +136,11 @@ jobs:
     - name: Run API tests
       env:
         BASE_URL: "http://localhost:4001"
-      run: pytest tests/api_tests/
+      run: pytest tests/api/
 
     - name: Collect test results
       uses: actions/upload-artifact@v2
       if: always()
       with:
         name: api-test-results
-        path: tests/api_tests/results/
+        path: tests/api/results/
