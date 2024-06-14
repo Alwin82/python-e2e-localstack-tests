@@ -133,6 +133,12 @@ jobs:
         pip install -r requirements.txt
         pip install pytest requests
 
+    - name: Run Docker Compose
+      run: |
+        cd awesome-localstack
+        chmod +x run-docker-compose-ci.sh
+        ./run-docker-compose-ci.sh
+
     - name: Run API tests
       env:
         FRONTEND_URL: "http://localhost:8081"
@@ -141,10 +147,3 @@ jobs:
         BACKEND_URL: "http://localhost:4001"
         IS_HEADLESS: "true"
       run: pytest tests/api/
-
-    - name: Collect test results
-      uses: actions/upload-artifact@v2
-      if: always()
-      with:
-        name: api-test-results
-        path: tests/api/results/
