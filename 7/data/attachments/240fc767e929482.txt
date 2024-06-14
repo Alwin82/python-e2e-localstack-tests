@@ -1,0 +1,94 @@
+INFO     WDM:logger.py:11 ====== WebDriver manager ======
+INFO     WDM:logger.py:11 Get LATEST chromedriver version for google-chrome
+INFO     WDM:logger.py:11 Get LATEST chromedriver version for google-chrome
+INFO     WDM:logger.py:11 Driver [/home/runner/.wdm/drivers/chromedriver/linux64/125.0.6422.141/chromedriver-linux64/chromedriver] found in cache
+INFO     http.client:base_api.py:17 Making POST request to URL: http://localhost:4001/users/signup
+INFO     http.client:base_api.py:21 Request Headers:
+{
+    "Content-Type": "application/json"
+}
+INFO     http.client:base_api.py:27 Request JSON Body:
+{
+    "username": "michael00",
+    "password": "0m)4DuMjga",
+    "email": "ohaynes@example.com",
+    "firstName": "Steve",
+    "lastName": "Wang",
+    "roles": [
+        "ROLE_ADMIN",
+        "ROLE_CLIENT"
+    ]
+}
+INFO     http.client:base_api.py:38 Response Status Code: 201
+INFO     http.client:base_api.py:41 Response Headers:
+{
+    "Vary": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+    "X-Content-Type-Options": "nosniff",
+    "X-XSS-Protection": "1; mode=block",
+    "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+    "Pragma": "no-cache",
+    "Expires": "0",
+    "X-Frame-Options": "DENY",
+    "Content-Type": "application/json;charset=UTF-8",
+    "Transfer-Encoding": "chunked",
+    "Date": "Fri, 14 Jun 2024 19:09:00 GMT",
+    "Keep-Alive": "timeout=60",
+    "Connection": "keep-alive"
+}
+INFO     http.client:base_api.py:49 Response Body:
+{
+    "token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtaWNoYWVsMDAiLCJhdXRoIjpbeyJhdXRob3JpdHkiOiJST0xFX0FETUlOIn0seyJhdXRob3JpdHkiOiJST0xFX0NMSUVOVCJ9XSwiaWF0IjoxNzE4MzkyMTQwLCJleHAiOjE3MTgzOTI0NDB9.-Wt1qfFcR0iYb5iJwokYWQ2wP30MTsz1qs4tWbtfNtI"
+}
+INFO     http.client:base_api.py:17 Making POST request to URL: http://localhost:4001/users/signin
+INFO     http.client:base_api.py:27 Request JSON Body:
+{
+    "username": "michael00",
+    "password": "0m)4DuMjga"
+}
+INFO     http.client:base_api.py:38 Response Status Code: 200
+INFO     http.client:base_api.py:41 Response Headers:
+{
+    "Vary": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+    "X-Content-Type-Options": "nosniff",
+    "X-XSS-Protection": "1; mode=block",
+    "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+    "Pragma": "no-cache",
+    "Expires": "0",
+    "X-Frame-Options": "DENY",
+    "Content-Type": "application/json;charset=UTF-8",
+    "Transfer-Encoding": "chunked",
+    "Date": "Fri, 14 Jun 2024 19:09:00 GMT",
+    "Keep-Alive": "timeout=60",
+    "Connection": "keep-alive"
+}
+INFO     http.client:base_api.py:49 Response Body:
+{
+    "username": "michael00",
+    "roles": [
+        "ROLE_ADMIN",
+        "ROLE_CLIENT"
+    ],
+    "firstName": "Steve",
+    "lastName": "Wang",
+    "token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtaWNoYWVsMDAiLCJhdXRoIjpbeyJhdXRob3JpdHkiOiJST0xFX0FETUlOIn0seyJhdXRob3JpdHkiOiJST0xFX0NMSUVOVCJ9XSwiaWF0IjoxNzE4MzkyMTQxLCJleHAiOjE3MTgzOTI0NDF9.0KkXQjUoLwCfHLUEWu54CaKT5XGmZ0ViidYBmPSd8cg",
+    "email": "ohaynes@example.com"
+}
+INFO     http.client:base_api.py:17 Making DELETE request to URL: http://localhost:4001/users/michael00
+INFO     http.client:base_api.py:21 Request Headers:
+{
+    "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtaWNoYWVsMDAiLCJhdXRoIjpbeyJhdXRob3JpdHkiOiJST0xFX0FETUlOIn0seyJhdXRob3JpdHkiOiJST0xFX0NMSUVOVCJ9XSwiaWF0IjoxNzE4MzkyMTQxLCJleHAiOjE3MTgzOTI0NDF9.0KkXQjUoLwCfHLUEWu54CaKT5XGmZ0ViidYBmPSd8cg"
+}
+INFO     http.client:base_api.py:38 Response Status Code: 204
+INFO     http.client:base_api.py:41 Response Headers:
+{
+    "Vary": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+    "X-Content-Type-Options": "nosniff",
+    "X-XSS-Protection": "1; mode=block",
+    "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+    "Pragma": "no-cache",
+    "Expires": "0",
+    "X-Frame-Options": "DENY",
+    "Date": "Fri, 14 Jun 2024 19:09:02 GMT",
+    "Keep-Alive": "timeout=60",
+    "Connection": "keep-alive"
+}
