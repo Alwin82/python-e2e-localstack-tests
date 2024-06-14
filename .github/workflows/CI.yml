@@ -135,7 +135,8 @@ jobs:
 
     - name: Run API tests
       env:
-        BASE_URL: "http://localhost:4001"
+        ADMIN_USERNAME: "admin"
+        ADMIN_PASSWORD: "admin"
       run: pytest tests/api/
 
     - name: Collect test results
