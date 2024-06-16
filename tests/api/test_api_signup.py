@@ -53,3 +53,25 @@ def test_should_return_400_if_email_invalid(sign_up_api: SignUp):
         assert (
             "must be a well-formed email address" in e.response.json()["email"]
         ), "Email error should mention being a well-formed email address"
+
+
+def test_should_return_400_if_missing_roles(sign_up_api: SignUp):
+    user = get_random_user()
+    user.roles = []  # intentionally missing roles
+    try:
+        response = sign_up_api.api_call(user)
+        response.raise_for_status()
+    except requests.exceptions.HTTPError as e:
+        assert e.response.status_code == 400, "Expected status code 400"
+        assert "Please pick at least one role" in e.response.json()["roles"], "Roles error should mention requirement"
+
+
+def test_should_return_400_if_invalid_role(sign_up_api: SignUp):
+    user = get_random_user()
+    user.roles = ["INVALID_ROLE"]  # intentionally invalid role
+    try:
+        response = sign_up_api.api_call(user)
+        response.raise_for_status()
+    except requests.exceptions.HTTPError as e:
+        assert e.response.status_code == 400, "Expected status code 400"
+        assert "invalid role" in e.response.json()["roles"], "Roles error should mention invalid role"
