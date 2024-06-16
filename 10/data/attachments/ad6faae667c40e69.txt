@@ -1,0 +1,168 @@
+INFO     http.client:base_api.py:17 Making POST request to URL: http://localhost:4001/users/signup
+INFO     http.client:base_api.py:21 Request Headers:
+{
+    "Content-Type": "application/json"
+}
+INFO     http.client:base_api.py:27 Request JSON Body:
+{
+    "username": "scottalicia",
+    "password": "!AEwOvud$1",
+    "email": "smay@example.com",
+    "firstName": "Erika",
+    "lastName": "Kelley",
+    "roles": [
+        "ROLE_ADMIN",
+        "ROLE_CLIENT"
+    ]
+}
+INFO     http.client:base_api.py:38 Response Status Code: 201
+INFO     http.client:base_api.py:41 Response Headers:
+{
+    "Vary": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+    "X-Content-Type-Options": "nosniff",
+    "X-XSS-Protection": "1; mode=block",
+    "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+    "Pragma": "no-cache",
+    "Expires": "0",
+    "X-Frame-Options": "DENY",
+    "Content-Type": "application/json;charset=UTF-8",
+    "Transfer-Encoding": "chunked",
+    "Date": "Sun, 16 Jun 2024 17:28:12 GMT",
+    "Keep-Alive": "timeout=60",
+    "Connection": "keep-alive"
+}
+INFO     http.client:base_api.py:49 Response Body:
+{
+    "token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzY290dGFsaWNpYSIsImF1dGgiOlt7ImF1dGhvcml0eSI6IlJPTEVfQURNSU4ifSx7ImF1dGhvcml0eSI6IlJPTEVfQ0xJRU5UIn1dLCJpYXQiOjE3MTg1NTg4OTMsImV4cCI6MTcxODU1OTE5M30.sCf0YYl5-MmFVGHOH0ALYi6PI1ZUe0hL3178Uo55cuE"
+}
+INFO     http.client:base_api.py:17 Making POST request to URL: http://localhost:4001/users/signin
+INFO     http.client:base_api.py:27 Request JSON Body:
+{
+    "username": "scottalicia",
+    "password": "!AEwOvud$1"
+}
+INFO     http.client:base_api.py:38 Response Status Code: 200
+INFO     http.client:base_api.py:41 Response Headers:
+{
+    "Vary": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+    "X-Content-Type-Options": "nosniff",
+    "X-XSS-Protection": "1; mode=block",
+    "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+    "Pragma": "no-cache",
+    "Expires": "0",
+    "X-Frame-Options": "DENY",
+    "Content-Type": "application/json;charset=UTF-8",
+    "Transfer-Encoding": "chunked",
+    "Date": "Sun, 16 Jun 2024 17:28:13 GMT",
+    "Keep-Alive": "timeout=60",
+    "Connection": "keep-alive"
+}
+INFO     http.client:base_api.py:49 Response Body:
+{
+    "username": "scottalicia",
+    "roles": [
+        "ROLE_ADMIN",
+        "ROLE_CLIENT"
+    ],
+    "firstName": "Erika",
+    "lastName": "Kelley",
+    "token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzY290dGFsaWNpYSIsImF1dGgiOlt7ImF1dGhvcml0eSI6IlJPTEVfQURNSU4ifSx7ImF1dGhvcml0eSI6IlJPTEVfQ0xJRU5UIn1dLCJpYXQiOjE3MTg1NTg4OTMsImV4cCI6MTcxODU1OTE5M30.sCf0YYl5-MmFVGHOH0ALYi6PI1ZUe0hL3178Uo55cuE",
+    "email": "smay@example.com"
+}
+INFO     http.client:base_api.py:17 Making GET request to URL: http://localhost:4001/users
+INFO     http.client:base_api.py:21 Request Headers:
+{
+    "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzY290dGFsaWNpYSIsImF1dGgiOlt7ImF1dGhvcml0eSI6IlJPTEVfQURNSU4ifSx7ImF1dGhvcml0eSI6IlJPTEVfQ0xJRU5UIn1dLCJpYXQiOjE3MTg1NTg4OTMsImV4cCI6MTcxODU1OTE5M30.sCf0YYl5-MmFVGHOH0ALYi6PI1ZUe0hL3178Uo55cuE"
+}
+INFO     http.client:base_api.py:38 Response Status Code: 200
+INFO     http.client:base_api.py:41 Response Headers:
+{
+    "Vary": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+    "X-Content-Type-Options": "nosniff",
+    "X-XSS-Protection": "1; mode=block",
+    "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+    "Pragma": "no-cache",
+    "Expires": "0",
+    "X-Frame-Options": "DENY",
+    "Content-Type": "application/json;charset=UTF-8",
+    "Transfer-Encoding": "chunked",
+    "Date": "Sun, 16 Jun 2024 17:28:13 GMT",
+    "Keep-Alive": "timeout=60",
+    "Connection": "keep-alive"
+}
+INFO     http.client:base_api.py:49 Response Body:
+[
+    {
+        "id": 1,
+        "username": "admin",
+        "email": "admin@email.com",
+        "roles": [
+            "ROLE_ADMIN",
+            "ROLE_CLIENT"
+        ],
+        "firstName": "Slawomir",
+        "lastName": "Radzyminski"
+    },
+    {
+        "id": 2,
+        "username": "client",
+        "email": "client@email.com",
+        "roles": [
+            "ROLE_CLIENT"
+        ],
+        "firstName": "Gosia",
+        "lastName": "Radzyminska"
+    },
+    {
+        "id": 3,
+        "username": "daniel36",
+        "email": "jkennedy@example.org",
+        "roles": [
+            "ROLE_ADMIN",
+            "ROLE_CLIENT"
+        ],
+        "firstName": "Rebecca",
+        "lastName": "Edwards"
+    },
+    {
+        "id": 4,
+        "username": "shawnsmith",
+        "email": "kennethrosales@example.com",
+        "roles": [
+            "ROLE_ADMIN",
+            "ROLE_CLIENT"
+        ],
+        "firstName": "Rebecca",
+        "lastName": "Zimmerman"
+    },
+    {
+        "id": 5,
+        "username": "scottalicia",
+        "email": "smay@example.com",
+        "roles": [
+            "ROLE_ADMIN",
+            "ROLE_CLIENT"
+        ],
+        "firstName": "Erika",
+        "lastName": "Kelley"
+    }
+]
+INFO     http.client:base_api.py:17 Making DELETE request to URL: http://localhost:4001/users/scottalicia
+INFO     http.client:base_api.py:21 Request Headers:
+{
+    "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzY290dGFsaWNpYSIsImF1dGgiOlt7ImF1dGhvcml0eSI6IlJPTEVfQURNSU4ifSx7ImF1dGhvcml0eSI6IlJPTEVfQ0xJRU5UIn1dLCJpYXQiOjE3MTg1NTg4OTMsImV4cCI6MTcxODU1OTE5M30.sCf0YYl5-MmFVGHOH0ALYi6PI1ZUe0hL3178Uo55cuE"
+}
+INFO     http.client:base_api.py:38 Response Status Code: 204
+INFO     http.client:base_api.py:41 Response Headers:
+{
+    "Vary": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+    "X-Content-Type-Options": "nosniff",
+    "X-XSS-Protection": "1; mode=block",
+    "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+    "Pragma": "no-cache",
+    "Expires": "0",
+    "X-Frame-Options": "DENY",
+    "Date": "Sun, 16 Jun 2024 17:28:13 GMT",
+    "Keep-Alive": "timeout=60",
+    "Connection": "keep-alive"
+}
