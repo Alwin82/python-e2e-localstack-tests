@@ -75,3 +75,17 @@ def test_should_return_400_if_invalid_role(sign_up_api: SignUp):
     except requests.exceptions.HTTPError as e:
         assert e.response.status_code == 400, "Expected status code 400"
         assert "invalid role" in e.response.json()["roles"], "Roles error should mention invalid role"
+
+def test_signup_existing_user_account(sign_up_api: SignUp):
+    # First, sign up a new user
+    new_user = get_random_user()
+    response = sign_up_api.api_call(new_user)
+    assert response.status_code == 201, "Expected status code 201"
+
+    # Try to sign up the same user again
+    try:
+        second_response = sign_up_api.api_call(new_user)
+        second_response.raise_for_status()
+    except requests.exceptions.HTTPError as e:
+        assert e.response.status_code == 422, "Username is already in use"
+        assert "Username is already in use" in e.response.json()["message"], "Expected error message for existing account"
